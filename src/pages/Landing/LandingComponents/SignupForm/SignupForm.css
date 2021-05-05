@@ -60,7 +60,9 @@ form{
     align-items: flex-start;
     justify-content: space-between;
 }
-
+.gender__radio__input{
+ cursor: pointer;
+}
 #female-radio{
     margin-left: 26px;
     

@@ -17,7 +17,7 @@ const  Landing=()=> {
   const [formData, setFormData]= useState({
     firstName: '',
     lastName: '',
-    dob: 0,
+    dob: '',
     gender: '',
     nationality:'',
     countryOfResidence: '',
@@ -32,9 +32,9 @@ const  Landing=()=> {
 
 
 const handleChange=(e)=>{
-  console.log(e.target.value)
+  console.log([e.target.name] + e.target.value)
   if(e.target.type==='radio'){
-      setFormData({...formData, gender: e.target.value})
+      setFormData({...formData, [e.target.name]: e.target.value})
   }else{
      setFormData({...formData, [e.target.name]: e.target.value})
   }
@@ -66,7 +66,7 @@ const handleBack =(back)=>{
       <OnBoarding1 
       formData={formData}
       handleChange={handleChange}
-      handleSubmit1={handleNext}/>}
+      handleNext={handleNext}/>}
       {
         progress.onBoarding2 &&
         <OnBoarding2

@@ -19,50 +19,54 @@ const  OnBoarding2=({handleChange, handleNext, handleBack, formData})=> {
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='visitedDubai'
                                 id='no'
                                 value='no'
                                 checked={formData.visitedDubai === 'no'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}No
+                            No
                         </label>
-                        <label htmlFor='yes' className='radio'>
+                        <label htmlFor='familyInDubai-yes' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
-                                id='yes'
+                                name='visitedDubai'
+                                id='familyInDubai-yes'
                                 value='yes'
                                 checked={formData.visitedDubai === 'yes'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}Yes
+                            Yes
                         </label>
               </div>
             </div>
             <div className='question__row'>
             <p>Do you have friends or family Dubai?</p>
               <div className='answer__container'>
-              <label htmlFor='no' className='radio'>
+              <label htmlFor='familyInDubai-no' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
-                                id='no'
+                                name='familyInDubai'
+                                id='familyInDubai-no'
                                 value='no'
                                 checked={formData.familyInDubai === 'no'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}No
+                            No
                         </label>
                         <label htmlFor='yes' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='familyInDubai'
                                 id='yes'
                                 value='yes'
                                 checked={formData.familyInDubai === 'yes'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}Yes
+                            Yes
                         </label>
               </div>
             </div>
@@ -73,56 +77,61 @@ const  OnBoarding2=({handleChange, handleNext, handleBack, formData})=> {
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='durationInDubai'
                                 id='up to 3 months'
                                 value='up to 3 months'
                                 checked={formData.durationInDubai === 'up to 3 months'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}up to 3 months
+                             up to 3 months
                         </label>
                         <label htmlFor='3 - 6 months' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='durationInDubai'
                                 id='3 - 6 months'
                                 value='3 - 6 months'
                                 checked={formData.durationInDubai === '3 - 6 months'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}3 - 6 months
+                               3 - 6 months
                         </label>
                         <label htmlFor='6 to 12 months' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='durationInDubai'
                                 id='6 to 12 months'
                                 value='6 to 12 months'
                                 checked={formData.durationInDubai === '6 to 12 months'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}6 - 9 months
+                              6 - 9 months
                         </label>
                         <label htmlFor='+12 months' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='durationInDubai'
                                 id='+12 months'
                                 value='+12 months'
                                 checked={formData.durationInDubai === '+12 months'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}+12 months
+                              +12 months
                         </label>
                         <label htmlFor='+3 years' className='radio'>
                             <input
                                 className='onboarding__input'
                                 type='radio'
+                                name='durationInDubai'
                                 id='+3 years'
                                 value='+3 years'
                                 checked={formData.durationInDubai === '+3 years'}
                                 onChange={(e)=>handleChange(e)}
                             />
-                            {' '}+3 years
+                               +3 years
                         </label>
                   
               </div>

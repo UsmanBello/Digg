@@ -1,12 +1,12 @@
 import './SignupForm.css'
 import {useState} from 'react'
 
-const SignupForm=({handleSubmit, formData, handleChange})=>{
+const SignupForm=({handleNext, formData, handleChange})=>{
 
 const handleFormSubmission=(e)=>{
     e.preventDefault()
     //sSetting the next VIEW
-    handleSubmit('onBoarding2')
+    handleNext('onBoarding2')
 }
 
     return (
@@ -16,7 +16,7 @@ const handleFormSubmission=(e)=>{
             </div>
             <div className='input__form__row'>
                 <div className='input__form__column'>
-                {formData.firstName!=='' && <span >First name</span>}
+                {formData.firstName && <span >First name</span>}
 
                 <input 
                 placeholder='First Name'
@@ -26,7 +26,7 @@ const handleFormSubmission=(e)=>{
                 onChange={(e)=>handleChange(e)}/>
                 </div>
                 <div className='input__form__column'>
-                {formData.lastName!=='' && <span >Last name</span>}
+                {formData.lastName && <span >Last name</span>}
                     <input
                     placeholder='Last Name'
                     className='text__input'
@@ -37,7 +37,7 @@ const handleFormSubmission=(e)=>{
             </div>
             <div className='input__form__row'>
                 <div className='input__form__column'>
-               {formData.dob!== '' && <span>Date of birth</span>}
+               {formData.dob && <span>Date of birth</span>}
                 <input
                 placeholder='Date of birth'
                 className='text__input'
@@ -54,6 +54,7 @@ const handleFormSubmission=(e)=>{
                             <input
                                 className='gender__radio__input'
                                 type='radio'
+                                name='gender'
                                 id='male'
                                 value='male'
                                 checked={formData.gender === 'male'}
@@ -65,6 +66,7 @@ const handleFormSubmission=(e)=>{
                             <input
                             className='gender__radio__input'
                             type='radio'
+                            name='gender'
                             id='female'
                             value='female'
                             checked={formData.gender === 'female'}
@@ -77,7 +79,7 @@ const handleFormSubmission=(e)=>{
             </div>
             <div className='input__form__row'>
             <div className='input__form__column'>
-             {formData.nationality!==''  && <span>Nationality</span>}
+             {formData.nationality  && <span>Nationality</span>}
                     <input
                     placeholder='Nationality'
                     className='text__input'
@@ -86,7 +88,7 @@ const handleFormSubmission=(e)=>{
                     onChange={(e)=>handleChange(e)}/>
                 </div>
                 <div className='input__form__column'>
-                {formData.countryOfResidence!== '' && <span className='show__label'>Country of residence</span>}
+                {formData.countryOfResidence && <span className='show__label'>Country of residence</span>}
                     <input
                     placeholder='Country of residence'
                     className='text__input'
@@ -100,7 +102,7 @@ const handleFormSubmission=(e)=>{
             </div>
             <div className='input__form__row'>
             <div className='input__form__column'>
-            {formData.number!=='' &&<span>Contact number</span>}
+            {formData.number &&<span>Contact number</span>}
                     <input
                     placeholder='Contact number'
                     className='text__input'
@@ -109,7 +111,7 @@ const handleFormSubmission=(e)=>{
                     onChange={(e)=>handleChange(e)}/>
                 </div>
                 <div className='input__form__column'>
-               {formData.email!=='' &&<span>Email address</span>}
+               {formData.email &&<span>Email address</span>}
                     <input
                     placeholder='Email address'
                     className='text__input'
