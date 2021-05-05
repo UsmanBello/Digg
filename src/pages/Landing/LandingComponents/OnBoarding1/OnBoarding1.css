@@ -1,0 +1,20 @@
+#landing__page{
+    display: flex;
+    
+}
+.left__landing{
+    flex:0.5;
+    background:linear-gradient(138deg , #4734E1, #8E27EA );
+    height: 100vh;
+}
+
+.right__landing{
+    flex: 0.5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup__form__container{
+    width: 80%;
+}
