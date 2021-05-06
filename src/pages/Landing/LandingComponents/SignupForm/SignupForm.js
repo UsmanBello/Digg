@@ -1,18 +1,16 @@
 import './SignupForm.css'
-import {useState} from 'react'
 
 const SignupForm=({handleNext, formData, handleChange})=>{
 
 const handleFormSubmission=(e)=>{
     e.preventDefault()
-    //sSetting the next VIEW
     handleNext('onBoarding2')
 }
 
     return (
         <form onSubmit={(e)=>handleFormSubmission(e)}>
             <div className='form__header'>
-                <p>Apply now to work in Dubai</p>
+                <p>Apply now to work in Dubai</p> 
             </div>
             <div className='input__form__row'>
                 <div className='input__form__column'>
@@ -40,7 +38,7 @@ const handleFormSubmission=(e)=>{
                {formData.dob && <span>Date of birth</span>}
                 <input
                 placeholder='Date of birth'
-                className='text__input'
+                className= 'text__input'
                 name='dob'
                 value={formData.dob}
                 onChange={(e)=>handleChange(e)}/>

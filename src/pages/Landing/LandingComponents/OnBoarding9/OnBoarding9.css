@@ -1,0 +1,66 @@
+.page__message{
+    margin-bottom: 42px;/*59px on big screen*/
+}
+
+.basic__information__review__container{
+    padding: 24px;
+    background-color: #F3F3F3;
+    margin-bottom: 32px;/*om big 44px*/
+}
+.questionnaire__review__container{
+    padding: 24px;
+    background-color: #F3F3F3;
+}
+.basic__information__review__header,
+.questionnaire__review__header{
+  font-size: 15.4px;/*22px on big*/
+  color: #4D33E2;
+  margin-bottom: 37px;/*52px on big*/
+}
+.basic__information__review__header{
+    display: flex;
+}
+.basic__information__review__header p{
+    margin-right:33px ;/*44px on big*/
+}
+.edit__icon{
+    height: 15px;
+    cursor: pointer;
+}
+.information__container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.information{
+    font-size: 14px;/*18px on big*/
+    margin-right: 50px;/*145px (not following the aspect ration)*/
+    margin-bottom: 21px;/*30px on big*/
+}
+.information .information__title{
+ font-weight: bold;
+}
+
+#last__action__bottons{
+    margin-top: 56px;/*80*/
+    margin-bottom: 83px;/*116*/
+}
+
+@media(max-width: 769px){
+    .information__container{
+        flex-direction: column;
+    }
+    .basic__information__review__container,
+    .questionnaire__review__container{
+        padding: 18px;
+    }
+
+}
+
+@media(max-width: 330px){
+    .basic__information__review__container,
+    .questionnaire__review__container{
+        min-width: 330px;
+    
+    }
+}

@@ -1,0 +1,53 @@
+
+.page__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 56px;/*Maximum 80*/
+}
+.brand__title{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold; 
+    font-size: 60px;/*on Big --81*/
+    /* line-height: 67px; */
+    flex: 0.2;
+    color:#141212;
+}
+.progress__container{
+    /* padding-top: 15px; */
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.progress__container span{
+    font-size: 15px;/* 20px*/
+    margin-bottom: 5px;
+    color:#141212;
+}
+
+.progress__bar1{
+    width: 100%;/*on big 1244*/
+    height: 18px;/*on big 18*/
+    background-color: #ECECEC;
+    border-radius: 9999px;
+}
+.progress1{
+    /* width: 12.5%; */
+    height: 18px;
+    background: linear-gradient(90deg , #4734E1, #8E27EA);
+    border-radius: 9999px;
+}
+@media(max-width: 769px){
+    .page__header{
+        /* display: flex; */
+        flex-direction: column;
+    }
+   .brand__title{
+       margin-bottom: 40px;
+   }
+   .progress1,
+   .progress__bar1{
+       height: 15px;
+   }
+}

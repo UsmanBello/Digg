@@ -2,14 +2,15 @@ form{
     width: 100%;
 }
 .form__header{
-    margin-bottom: 55px;
+    margin-bottom: 40px;/*55px on big*/
     display: flex;
     justify-content: center;
     font-size: 35px;/* change in big screen to 46*/
 }
+
 .input__form__row{
     width: 100%;
-    height: 50px;/*change in big screen to 76px*/
+   /* height: 50px;/*change in big screen to 76px*/
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -20,23 +21,31 @@ form{
     justify-content: flex-start;
     padding-left: 8px;
     font-size: 18px;/*change in big screen to 26*/
+    max-height: 54px;/* just added as the max is 74px*/
+
 }
 .input__form__column{
     flex: 0.5;
+    /* max-width: 55px; */
     height: 100%;
     position: relative;
+    /*max-width: 302px;/*4023*/
 }
 
 .text__input{
     height: 100%;
-    width: 95%;
+    width: 95%;/* 72px on big *0.72*/
     padding: 20px;
     background-color: #EFEFEF;
     border: none;
 }
-/* .input__form__column span{
-    display: none;
-   
+/* .drop__text{
+    height: 100%; */
+    /*width: 95%;/* 72px on big *0.72*/
+    /* padding: 20px;
+    background-color: #EFEFEF;
+    border: none;
+    padding-top:30px;
 } */
 .input__form__column span{
     position: absolute;
@@ -47,7 +56,6 @@ form{
 }
 .input__form__column .text__input:focus {
     outline: 1px solid #4B33E1;
-    /* display: block; */
 }
 #gender__select__title{
     font-size: 14px;/*change in big screen to 18*/
@@ -65,14 +73,11 @@ form{
 }
 #female-radio{
     margin-left: 26px;
-    
-
 }
 
 .radio{
     cursor: pointer;
-    font-size: 14px;/*change in big screen to 18*/
-    /* font-size: 15px; */
+    font-size: 13px;/*change in big screen to 18*/
 }
 
 #form__button__container{
@@ -81,15 +86,51 @@ form{
     padding-right: 8px;
 }
 .signup__button{
+    cursor: pointer;
     background: linear-gradient(138deg , #4734E1, #8E27EA );
     color: white;
-    width: 170px;    /*on big screen 270px;*/
-    height: 60px;      /*on big screen 75px*/
+    width: 202px;    /*on big screen 270px;*/
+    height: 52px;      /*on big screen 75px*/
     border:none;
     border-radius: 9999px;
-    font-size: 16px;/*on big 22px*/
+    font-size: 15px;/*on big 22px*/
+    transition: 0.2s;
+}
+.signup__button:hover{
+    transform: scale(1.1)
 }
 
-
+@media(max-width: 769px){
+    form{
+        width: 100%;
+        
+    }
+    .form__header{
+        margin-bottom: 20px;
+        font-size: 26px;
+        justify-content: flex-start;
+    }
+    .input__form__row{
+        display: flex;
+        flex-direction: column;
+        /* height: auto; */
+        margin-bottom: 0px;
+    }
+    .input__form__column{
+            flex:1;
+            margin-bottom: 20px;
+            height: 70px;
+    }
+    .text__form__row{
+        margin-top:30px;
+        padding-left: 0px;
+    }
+    .text__input{
+        width: 100%;
+    }
+    #gender__select__column{
+        padding-left:0px;
+    }
+}
 
 

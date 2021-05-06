@@ -1,1 +1,23 @@
+.onBoarding__background{
+    display: flex;
+    justify-content: flex-start;
+} 
 
+.page__container{
+    text-align: start;
+    width: 100%;
+    margin: 20px 50px;/*Should be 67-left 56-up*/
+}
+
+@media(max-width: 769px){
+    .page__container{
+        margin:10px 20px;
+    }
+}
+@media(max-width: 330px){
+
+   .page__container{
+       margin:5px 10px;
+       min-width: 330px;
+   }
+}

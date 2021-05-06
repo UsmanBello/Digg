@@ -1,0 +1,50 @@
+.question__row p{
+    font-size: 18px;/*on big 26px, now all is divide by 0.7*/
+    color:#141212;
+    margin-bottom: 20.3px;/* on-BIG 29px */ 
+    }
+    
+    .question__row{
+        margin-bottom: 33px;/*on-big 47px*/
+    }
+    .question__row label{
+        margin-right: 41px;
+        background-color:#EFEFEF;
+        padding: 15px 20px;
+        border-radius: 9999px;
+        font-size: 12.2px;/* big screen 18*/
+        margin-bottom: 10px;
+        transition: 0.2s;
+    }
+    .question__row label:hover{
+        color: white;
+        background: linear-gradient(111deg , #4734E1, #8E27EA);
+       
+        transform: scale(1.1);
+    }
+    
+    .question__row label span{
+        padding: 0 20px;
+    }
+     .onboarding__input{
+        display: none;
+    }
+    .selected {
+        background: linear-gradient(111deg , #4734E1, #8E27EA);
+        color: white;
+    }  
+    
+    .page__action__buttons{
+        margin-top:14px; /* big 20px*/
+    }
+
+    .answer__container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media(max-width: 769px){
+        .question__row label{
+            margin-right: 20px;
+        }
+    }
