@@ -62,6 +62,12 @@ const handleChange=(e)=>{
      setFormData({...formData, [e.target.name]: e.target.value})
   }
 }
+const handleDateChange = (e) => {
+  console.log(e.target.value)
+  var value = new Date(e.target.value);
+  console.log(value)
+  setFormData({ ...formData, dob: e.target.value });
+};
 const handleNext=(next)=>{
     console.log(formData)
     setProgress({
@@ -97,6 +103,7 @@ const handleBack =(back)=>{
       <OnBoarding1 
       formData={formData}
       handleChange={handleChange}
+      handleDateChange={handleDateChange}
       handleNext={handleNext}/>}
       {
         progress.onBoarding2 &&

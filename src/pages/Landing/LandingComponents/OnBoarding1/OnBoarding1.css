@@ -1,71 +1,94 @@
-#landing__page{
-    display: flex;
-    
+#landing__page {
+  display: flex;
 }
-.left__landing{
-    flex:0.5;
-    background:linear-gradient(138deg , #4734E1, #8E27EA );
-    height: 100vh;
+.left__landing {
+  flex: 0.5;
+  background: url("../../../../assets/images/guyguy.png"); /*linear-gradient(138deg , #4734E1, #8E27EA );*/
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  /* width: 100%;
+    height: auto; */
+  height: 100vh;
+  position: relative;
+}
+#landing__header__left {
+  margin-top: 20px;
+  margin-left: 50px;
+  color: white;
+}
+.right__landing {
+  flex: 0.5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right__landing .page__header {
+  display: none;
+}
+.signup__form__container {
+  width: 80%;
 }
 
-.right__landing{
-    flex: 0.5;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.landing__container__texts {
+  position: absolute;
+  color: white;
+  margin-top: 400px;
+  margin-left: 50px;
+  margin-right: 70px;
 }
-.right__landing .page__header{
+.top__text {
+  font-size: 14px; /*20*/
+  text-align: start;
+  line-height: 30px;
+  font-weight: lighter;
+}
+.bottom__text {
+  margin-top: 30px;
+  font-size: 15.4px; /*22*/
+  text-align: start;
+}
+
+@media (max-width: 1190px) {
+  .left__landing {
     display: none;
-}
-.signup__form__container{
-    width: 80%;
+  }
+  .landing__container__texts {
+    display: none;
+  }
+  #landing__page {
+    flex-direction: column;
+    margin: 30px 60px;
+  }
 
+  .right__landing {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  .right__landing .page__header {
+    display: block;
+    align-self: flex-start;
+    margin-bottom: 30px;
+  }
+  .right__landing .signup__form__container {
+    margin-top: 0px;
+    align-self: flex-start;
+    width: 100%;
+  }
 }
-
-
-@media(max-width: 960px){
-    .left__landing{
-        display: none;
-    }
-    .right__landing{
-        flex: 1;
-    }   
+@media (max-width: 500px) {
+  #landing__page {
+    margin: 15px 30px;
+  }
 }
-@media(max-width: 769px){
-    #landing__page{
-        flex-direction: column;
-        margin: 30px 60px;
-    }
-    
-    .right__landing{
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-    
-    }
-    .right__landing .page__header{
-        display: block;
-        align-self: flex-start;
-        margin-bottom: 30px;
-    }
-    .right__landing .signup__form__container{
-        margin-top: 0px;
-        align-self: flex-start;
-        width: 100%;
-    }
-}
-@media(max-width: 500px){
-    #landing__page{
-        margin: 15px 30px;
-    }
-}
-@media(max-width: 330px){
-    #landing__page{
-        margin: 5px 10px;
-    }
-    .right__landing{
-        min-width: 330px;
-    }
+@media (max-width: 330px) {
+  #landing__page {
+    margin: 5px 10px;
+  }
+  .right__landing {
+    min-width: 330px;
+  }
 }

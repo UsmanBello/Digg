@@ -1,28 +1,37 @@
-import ChoiceInput from '../ChoiceInput/ChoiceInput'
+import ChoiceInput from "../ChoiceInput/ChoiceInput";
 
-import './QuestionRow.css'
+import "./QuestionRow.css";
 
-const QuestionRow=({question, name,values, formDataValue, handleChange, type})=>{
-    
-    return (
-        <div className='question__row'>
-        <p>{question}</p>
-        <div className='answer__container'>
-                {
-                    values.map((value,index)=>{
-                      return   <ChoiceInput
-                                    key={index}
-                                    name={name}
-                                    id={name+'-'+value}
-                                    value={value}
-                                    formDataValue={formDataValue}
-                                    handleChange={handleChange}
-                                    type={type}
-                                    />
-                    })
-                }
-        </div>
+const QuestionRow = ({
+  question,
+  name,
+  values,
+  formDataValue,
+  handleChange,
+  type,
+}) => {
+  console.log(values);
+  return (
+    <div className="question__row">
+      <p>{question}</p>
+      <div className="answer__container">
+        {values.map((val, index) => {
+          // console.log(val.answer)
+          return (
+            <ChoiceInput
+              key={index}
+              name={name}
+              id={name + "-" + val.answer}
+              value={val.answer}
+              formDataValue={formDataValue}
+              handleChange={handleChange}
+              type={type}
+              imgSrc={val.image}
+            />
+          );
+        })}
       </div>
-    )
-}
-export default QuestionRow
+    </div>
+  );
+};
+export default QuestionRow;
